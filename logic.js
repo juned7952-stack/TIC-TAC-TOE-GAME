@@ -129,3 +129,4 @@ function handleResetGame() {
         statusDisplay.innerHTML = "Your turn (X)";
 
     
+
