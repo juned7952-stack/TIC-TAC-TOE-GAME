@@ -1,0 +1,91 @@
+body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8; /* Light blue background */
+            color: #1e3a8a; /* Deep blue text */
+        }
+
+        h1 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        #status {
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: #3b82f6; /* Accent blue */
+        }
+
+        /* --- Flexbox Game Board Layout (The Requested Change) --- */
+        #game-board {
+            display: flex; /* Use Flexbox */
+            flex-wrap: wrap; /* Allow cells to wrap onto the next line */
+            
+            /* Set explicit width to contain 3 cells + 2 gaps (3*100 + 2*5 = 310px) */
+            width: 310px; 
+            
+            gap: 5px; /* Spacing between cells */
+            background-color: #1e3a8a; /* Dark background for the grid lines */
+            border: 8px solid #1e3a8a;
+            border-radius: 15px; /* Rounded corners for the board */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cell {
+            /* Fixed size for each cell */
+            width: 100px;
+            height: 100px;
+            
+            background-color: #ffffff;
+            border-radius: 5px;
+            
+            /* Center the X or O inside the cell */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            font-size: 4em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .cell:hover {
+            background-color: #e0f2fe; /* Light hover effect */
+            transform: scale(1.02);
+        }
+
+        .cell.x {
+            color: #ef4444; /* Red color for X */
+        }
+
+        .cell.o {
+            color: #3b82f6; /* Blue color for O */
+        }
+
+        /* --- Button Styling --- */
+        #reset-btn {
+            margin-top: 30px;
+            padding: 12px 28px;
+            font-size: 1.1em;
+            cursor: pointer;
+            border: none;
+            background-color: #10b981; /* Green color */
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        #reset-btn:hover {
+            background-color: #059669;
+            transform: translateY(-2px);
+        }
